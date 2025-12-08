@@ -10,13 +10,13 @@ nav_order: 2
 
 ## Key characteristics:
 
-- Pattern-based matching: Semgrep rules define abstract code structures (AST patterns), enabling accurate detection without complex configuration.
+- **Pattern-based matching:** Semgrep rules define abstract code structures (AST patterns), enabling accurate detection without complex configuration.
 
-- Language-aware: Supports 30+ languages (Python, JS/TS, Go, Java, C, etc.) with syntactic understanding.
+- **Language-aware:** Supports 30+ languages (Python, JS/TS, Go, Java, C, etc.) with syntactic understanding.
 
-- Custom and community rules: You can write custom YAML rules or use thousands of open-source security rules (OWASP, r2c, bandit-equivalent, etc.).
+- **Custom and community rules:** You can write custom YAML rules or use thousands of open-source security rules (OWASP, r2c, bandit-equivalent, etc.).
 
-- Speed and CI-friendly design: Designed for incremental scans and seamless integration into CI pipelines.
+- **Speed and CI-friendly design:** Designed for incremental scans and seamless integration into CI pipelines.
 
 ## Internal Working
 Semgrep operates by parsing the target source code into an abstract syntax tree (AST) and applying rule patterns to match structures of interest. When a rule matches, Semgrep emits a JSON "finding" that includes:
@@ -58,15 +58,15 @@ VulCAN extracts the relevant fields from each finding and normalizes them for in
 
 The following fields are parsed:
 
-1. File Path: Indicates where the vulnerability occurs within the repository.
+1. **File Path:** Indicates where the vulnerability occurs within the repository.
 
-2. Start and End Lines: These define the exact line range of the vulnerable code block. Defaults are used to ensure robustness if fields are missing. This information along with the file path is used to fetch the code blob to send as context for GenAI suggestions. 
+2. **Start and End Lines:** These define the exact line range of the vulnerable code block. Defaults are used to ensure robustness if fields are missing. This information along with the file path is used to fetch the code blob to send as context for GenAI suggestions. 
 
-3. Vulnerability Type (CWE): Semgrep rules often include CWE IDs. the scanner extracts the first CWE if multiple are present.
+3. **Vulnerability Type (CWE):** Semgrep rules often include CWE IDs. the scanner extracts the first CWE if multiple are present.
 If no CWE is provided, "N/A" is assigned.
 
-4. Message (Rule Explanation): The human-readable explanation from the Semgrep rule is stored to describe the issue.
+4. **Message (Rule Explanation):** The human-readable explanation from the Semgrep rule is stored to describe the issue.
 
-5. Severity: Semgrep severities are normalized to lowercase (low, medium, high, critical), which simplifies downstream processing (UI display, sorting, alerting, etc.).
+5. **Severity:** Semgrep severities are normalized to lowercase (low, medium, high, critical), which simplifies downstream processing (UI display, sorting, alerting, etc.).
 
 
