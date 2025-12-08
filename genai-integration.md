@@ -1,5 +1,7 @@
 ---
 title: GenAI Integration
+layout: default
+nav_order: 3
 ---
 
 # GenAI Integration

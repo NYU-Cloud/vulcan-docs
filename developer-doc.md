@@ -1,5 +1,7 @@
 ---
 title: Developer Documentation
+layout: default
+nav_order: 4
 ---
 
 # Developer Documentation

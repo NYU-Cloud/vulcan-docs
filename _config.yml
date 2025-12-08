@@ -3,6 +3,7 @@ description: Vulnerability Code ANalyzer
 remote_theme: just-the-docs/just-the-docs
 
 url: https://github.com/NYU-Cloud/Vulnerability-Detector/
+logo: /assets/vulcan-logo.png
 
 aux_links:
   Documentation Repository: https://github.com/NYU-Cloud/vulcan-docs
