@@ -85,8 +85,9 @@ VulCAN is a Vulnerability Code ANalyser that will allow users to submit GitHub r
 
 
 ## API Endpoints
+
 | Method | Endpoint                              | Description              |
-|--------|----------------------------------------|--------------------------|
+|:-------|:---------------------------------------|:-------------------------|
 | GET    | /auth/github/login                     | Initiate OAuth           |
 | GET    | /auth/github/callback                  | OAuth callback           |
 | GET    | /auth/me                               | Current user info        |
