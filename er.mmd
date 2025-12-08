@@ -1,0 +1,58 @@
+---
+config:
+  layout: elk
+---
+erDiagram
+	direction LR
+	USERS {
+		Integer id PK ""  
+		BigInteger github_id  ""  
+		String github_login  ""  
+		String github_avatar_url  ""  
+		String github_access_token  ""  
+		DateTime created_at  ""  
+	}
+
+	SCANS {
+		UUID id PK ""  
+		String repo_url  ""  
+		String repo_owner  ""  
+		String repo_name  ""  
+		String branch  ""  
+		String commit_hash  ""  
+		DateTime timestamp  ""  
+		String status  ""  
+		Text error_detail  ""  
+		Integer user_id FK ""  
+	}
+
+	FINDINGS {
+		UUID id PK ""  
+		UUID scan_id FK ""  
+		String file_path  ""  
+		Integer start_line  ""  
+		Integer end_line  ""  
+		String vuln_type  ""  
+		String severity  ""  
+		UUID ai_suggestion_ref FK ""  
+		String blob_url  ""  
+	}
+
+	AI_SUGGESTIONS {
+		UUID id PK ""  
+		UUID finding_id FK ""  
+		String file_path  ""  
+		Text suggested_code  ""  
+		Text original_code  ""  
+		Integer start_line  ""  
+		Integer end_line  ""  
+		Text explanation  ""  
+		Text suggestion_text  ""  
+		String applied_commit_sha  ""  
+		DateTime created_at  ""  
+	}
+
+	USERS||--o{SCANS:"has many"
+	SCANS||--o{FINDINGS:"has many"
+	FINDINGS||--o{AI_SUGGESTIONS:"has many"
+	FINDINGS}o--||AI_SUGGESTIONS:"ai_suggestion_ref"
