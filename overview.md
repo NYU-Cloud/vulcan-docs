@@ -99,15 +99,5 @@ VulCAN is a Vulnerability Code ANalyser that will allow users to submit GitHub r
 | GET    | /api/suggestions/{id}                  | Get suggestion details   |
 | POST   | /api/suggestions/{id}/commit           | Commit fix to GitHub     |
 
-## User Interface
-- The user interacts with the frontend by first logging into the application with GitHub OAuth and authorizing the app to access repositories. 
-- Once authentication is successful, the user can select the repository from the drop down and choose a branch if needed. The branches in the repository are fetched as a drop down. This ensures that the request made to the backend correspond to a valid repository and branch. 
-
-![alt text](assets/new-scan.png)
-
-- After selecting the repository and branch, a `/scan/start` POST request is made which schedules a scanning of the repository by a fargate task. 
-- A user can view the history of scans in the `Scan History` tab. 
-
-![alt text](assets/scan-history.png)
 
 
