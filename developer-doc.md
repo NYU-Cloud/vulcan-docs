@@ -8,6 +8,7 @@ nav_order: 4
 
 ## Setup
 - Clone the repository
+
 ```bash
 git clone git@github.com:NYU-Cloud/Vulnerability-Detector.git
 ```
