@@ -1,5 +1,7 @@
 ---
-title: Project Documentation
+title: Home
+layout: default
+nav_order: 0
 ---
 
 # VulCAN
