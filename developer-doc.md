@@ -8,11 +8,13 @@ nav_order: 4
 
 ## Setup
 - Clone the repository
-```
+```bash
 git clone git@github.com:NYU-Cloud/Vulnerability-Detector.git
 ```
+
 - Create a .env file with the following sections
-```
+
+```bash
 # Frontend Configuration
 FRONTEND_REDIRECT_URI=http://localhost:3000/auth/callback
 
@@ -42,10 +44,11 @@ GITHUB_API_BASE_URL=https://api.github.com
 GITHUB_OAUTH_SCOPE=read:user user:email repo workflow
 GITHUB_REDIRECT_URI=http://localhost:8080/auth/github/callback
 GITHUB_CLIENT_SECRET=<insert client secret>
+```
 
-```
 ## Folder Structure
-```
+
+```bash
 .
 ├── backend
 │   ├── alembic.ini
