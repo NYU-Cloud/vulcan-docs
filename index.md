@@ -12,5 +12,4 @@ Welcome to VulCAN! Use the sidebar or links below to navigate:
 - [Semgrep](semgrep.md)
 - [GenAI Integration](genai-integration.md)
 - [Developer Documentation](developer-doc.md)
-- [Performance Testing](performance-testing.md)
 - [User Interface](user-interface.md)
